@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900|Rubik:300,400,400i,500,700,900');
+body {
+	font-family: 'Rubik', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 26px;
+	color: #333333;
+	letter-spacing: 1px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+	font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+}
+
+.wrapper {
+	overflow: hidden;
+}
+
+.img {
+	max-width: 100%;
+	transition: all 0.3s ease-out 0s;
+}
+
+.button {
+	-webkit-transition: all 0.5s ease-out 0s;
+	-moz-transition: all 0.5s ease-out 0s;
+	-ms-transition: all 0.5s ease-out 0s;
+	-o-transition: all 0.5s ease-out 0s;
+	transition: all 0.5s ease-out 0s;
+}
+
+a:focus,
+a:hover,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+	color: #ff1414;
+}
+
+.footer-menu li a:hover {
+	color: #ccc;
+	text-decoration: none;
+}
+
+:focus {
+	outline: none;
+}
+
+a,
+button {
+	outline: medium none;
+	color: #337ab7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
+	color: #212121;
+	font-size: 14px;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-style: normal;
+	font-weight: 600;
+	letter-spacing: 0.06875rem;
+	line-height: 2em;
+	text-transform: capitalize;
+}
+
+.class-name h1,
+.class-name h2,
+.class-name h3,
+.class-name h4,
+.class-name h5,
+.class-name h6 {
+	color: #ffffff;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: #ff1414;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 35px;
+}
+
+h3 {
+	font-size: 28px;
+	color:#ff1414;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+li {
+	list-style: none
+}
+
+.list-inline {
+	display: inline-flex;
+	list-style: none;
+}
+
+.list-inline li {
+	display: inline-block;
+}
+
+.custom-select {
+	background: none;
+}
+
+p {
+	color: #737373;
+	font-size: 15px;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+	line-height: 25px;
+	margin-bottom: 20px;
+}
+
+*::-moz-selection {
+	background: #ff1414;
+	color: #fff;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: #ff1414;
+	color: #fff;
+	text-shadow: none;
+}
+
+::selection {
+	background: #ff1414;
+	color: #fff;
+	text-shadow: none;
+}
+
+*::-moz-placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+
+*::placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+
+.dib {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.
+
+/*-------------------------------------------------------
+ - Common CSS
+---------------------------------------------------------*/
+
+.section-title {
+	max-width: 600px;
+	margin: auto;
+}
+
+.section-title h2 {
+	color: #ffffff;
+	margin-bottom: 10px;
+	font-size: 30px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.shape-white {
+	background-color: #ffffff;
+}
+
+.shape-gray {
+	background-color: #e9e7ea;
+}
+
+.shape3,
+.shape3-gray,
+.shape-gray,
+.shape-white,
+.shape {
+	height: 1px;
+	margin: 0 auto 70px;
+	position: relative;
+	width: 60px;
+}
+
+.shape3 {
+	width: 100px;
+	background-color: #ff1414;
+}
+
+.shape3-gray {
+	width: 100px;
+	background-color: #ff1414;
+}
+
+
+/*-------------------------------------------------------
+ - Color CSS
+---------------------------------------------------------*/
+
+
+.single-feature-item li:hover h5,
+.blog-author:hover,
+.text-color,
+.header-nav .menu>li.active>a,
+.header-nav .menu>li>a:hover,
+.app-button li span,
+.app-button li a p,
+.app-button li a i {
+	color: #ff1414 !important;
+}
+
+.popup-video,
+.shape,
+.app-button li a:hover,
+.header-nav .menu>li.active>a:after,
+.header-nav .menu>li>a:after {
+	background-color: #ff1414;
+}
+
+.md-form input[type=text]:focus:not([readonly]),
+.md-form textarea.md-textarea:focus:not([readonly]) {
+	-webkit-box-shadow: 0 1px 0 0 #ff1414;
+	box-shadow: 0 1px 0 0 #ff1414;
+	border-bottom: 1px solid #ff1414;
+}
+
+.md-form input[type=text]:focus:not([readonly])+label,
+.md-form textarea.md-textarea:focus:not([readonly])+label {
+	color: #ff1414;
+}
+
+.testimonial-carousel .carousel-control:before {
+	color: #ff1414;
+}
+
+
+/*-------------------------------------------------------
+ - Header Style
+---------------------------------------------------------*/
+
+header {
+	position: absolute;
+	top: 50px;
+	width: 100%;
+	z-index: 99;
+}
+
+.sticky-wrapper {
+	height: 0 !important;
+}
+
+.is-sticky .header-nav-area {
+	background-color: #ffffff;
+	box-shadow: 0 0 12px 1px #dddddd;
+	padding: 12px 0;
+	z-index: 99999;
+}
+
+.header-area {
+	background-image: url("../images/intro-bg.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 800px;
+	position: relative;
+}
+
+.header-nav .menu>li.active>a:after,
+.header-nav .menu>li>a:hover:after {
+	opacity: 1;
+}
+
+.logo img {
+	max-width: 300px;
+}
+
+.heade-slider-content {
+	padding-top: 200px;
+}
+
+.header-content h1 {
+	font-size: 50px;
+	font-weight: normal;
+	line-height: 66px;
+	margin-bottom: 45px;
+	text-transform: uppercase;
+}
+
+.header-content p {
+	margin-bottom: 45px;
+}
+
+.header-content h1 span {
+	font-weight: 900;
+}
+
+.header-content .lead {
+	font-weight: 500;
+	margin-bottom: 50px;
+	line-height: 28px;
+	font-size: 18px;
+}
+
+
+/*-------------------------------------------------------
+ - Footer Area Style
+---------------------------------------------------------*/
+
+#contact-form {
+    	background: #ffffffa6;
+    	padding: 20px;
+    	border-radius: 8px;
+}
+
+
+
+.footer-area {
+	background-image: url(../images/footer-bg.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	padding-top: 50px;
+}
+.footer-contact-icon{
+	color: white;
+}
+
+
+
+.form-control:focus {
+	box-shadow: none;
+	background-color: none;
+	border-color: #ff0000;
+}
+
+.mailchemp-form form input[type="submit"] {
+	background: #ff0000;
+	border: medium none;
+	border-radius: 0 30px 30px 0;
+	color: #ffffff;
+	cursor: pointer;
+	display: block;
+	line-height: 2.6;
+	max-width: 30%;
+	padding: 0 20px;
+}
+
+.mailchemp-form {
+	background: -webkit-gradient(linear, left top, left bottom, from(#b9d14b), to(#899f23));
+	background: -webkit-linear-gradient(#b9d14b, #899f23);
+	background: -o-linear-gradient(#b9d14b, #899f23);
+	background: linear-gradient(#b9d14b, #899f23);
+	border-radius: 5px;
+	margin: auto auto 100px;
+	max-width: 500px;
+	padding: 30px 30px 40px;
+	text-align: center;
+	-webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+}
+
+.mailchemp-title {
+	margin: auto auto 100px;
+	max-width: 383px;
+	text-align: center;
+}
+
+.mailchemp-title h5 {
+	font-weight: 500;
+	letter-spacing: 0;
+	line-height: 28px;
+	margin-bottom: 20px;
+	text-transform: capitalize;
+}
+
+.mailchemp-title .btn {
+	padding: 12px 85px;
+}
+
+.mailchemp-title a.btn.btn-primary:hover {
+	color: #ffffff
+}
+
+.mailchemp-form form {
+	margin-top: 60px;
+}
+
+.mailchemp-form p {
+	color: #ffffff;
+	line-height: normal;
+	margin-top: 0;
+	padding: 0 60px 20px;
+}
+
+.mailchemp-form h5 {
+	color: #ffffff;
+	font-size: 24px;
+	padding-bottom: 10px;
+	text-transform: capitalize;
+}
+
+.contact-area {
+	padding: 100px 0;
+	overflow: hidden;
+	background-image: url(../images/contact-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.form-control md-textarea {
+	margin: 0 auto;
+}
+
+.footer-contact-info h5 {
+	color: #fff;
+}
+
+.footer-contact-info p {
+	margin-bottom: 0;
+	color: #fff;
+}
+
+.footer-contact-icon {
+	float: left;
+	position: relative;
+	top: 8px;
+}
+
+.footer-contact-content {
+	margin-left: 60px;
+}
+
+.footer-contact {
+	border-bottom: 1px solid #fff;
+	padding-bottom: 70px;
+	margin-bottom: 40px;
+}
+
+.footer-menu li a {
+	color: #fff;
+	font-size: 14px;
+	padding-right: 15px;
+}
+
+footer .social-icon {
+	opacity: 1;
+	top: 0;
+	right: 0;
+	padding-top: 20px;
+	left: auto;
+}
+
+footer .social-icon li a {
+	background-color: #ffffff;
+	border-radius: 50%;
+	color: #313131;
+	display: inline-block;
+	height: 35px;
+	line-height: 35px;
+	margin-left: 10px;
+	text-align: center;
+	width: 35px;
+}
+
+footer .social-icon li a:hover {
+	background-color: #f2569a;
+	color: #ffffff;
+}
+
+.copyright {
+	color: #fff;
+	margin-bottom: 0;
+	padding-bottom: 50px;
+	padding-top: 20px;
+	font-size: 14px;
+}
+
+.copyright a {
+	color: #fff;
+}
+
+.copyright a:hover {
+	color: #ccc;
+}
+
+.language strong {
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.language-select li {
+	display: inline-flex !important;
+	font-size: 12px;
+}
+
+select.custom-select {
+	background-color: rgb(255 255 255);
+        padding: 5px 10px 5px 15px;
+        position: relative;
+        color: #ff1414;
+        border: 1px solid #ff1414;
+        cursor: pointer;
+}
+
+.custom-select:focus {
+	box-shadow: none;
+	border-color: transparent;
+
+}	
