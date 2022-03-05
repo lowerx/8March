@@ -4,7 +4,7 @@ from werkzeug.exceptions import abort
 from database import DataBase
 
 def get_db_connection():
-    db = DataBase('Cuesta')
+    db = DataBase('Jeroglifico')
     return db
 
 # def get_post(post_id):
