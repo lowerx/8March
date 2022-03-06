@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %} Jeroglifico {% endblock %}
+{% block title %} Jeroglifico {{ id }} {% endblock %}
 
 {% block content %}
 	<div class="header-area"  id="home">
@@ -40,7 +40,7 @@
 						<!--Grid row-->
 					</form>
 					<div class="text-center text-md-left">
-						<a class="btn btn-md btn-pink waves-effect waves-light">Отправить сообщение</a>
+						<a class="btn btn-md btn-pink waves-effect waves-light" href="{{ url_for('login')}}">Отправить сообщение</a>
 					</div>
 					<div class="status"></div>
 				</div>

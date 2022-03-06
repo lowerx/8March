@@ -15,7 +15,11 @@ body {
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
 }
-
+#login {
+    	background: #ffffffa6;
+    	padding: 20px;
+    	border-radius: 8px;
+}
 .wrapper {
 	overflow: hidden;
 }
@@ -277,6 +281,57 @@ p {
 /*-------------------------------------------------------
  - Header Style
 ---------------------------------------------------------*/
+.rebus {
+	margin-top: 40px;
+	margin-left: auto;
+    margin-right: auto;
+    width: 6em
+}
+
+
+.cssmenu p {
+	color: white;
+	font-size: 15px;
+}
+
+#subscribe,
+#login{
+    position: absolute;
+	z-index: 22;
+	margin: 40px;
+    
+}
+
+/**** advanced input styling ****/
+/* placeholder */
+::-webkit-input-placeholder  {
+    color: rgb(190, 188, 188);
+    font-style: italic;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder{
+    color: rgb(190, 188, 188);
+    font-style: italic;
+}
+input {
+  outline: none;
+}
+
+#btn {
+	padding: 40px;
+}
+
+#log {
+    background: #ffffffa6;
+    padding: 5px;
+    border-radius: 8px;
+}
+#pass {
+    background: #ffffffa6;
+    padding: 5px;
+    border-radius: 8px;
+}
+
 
 header {
 	position: absolute;

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %} Jeroglifico {{ id }} {% endblock %}
+
+{% block content %}
+	<div id="container_demo" >
+		<!-- спрятанный якорь, чтобы избежать прыжков http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+		<a class="hiddenanchor" id="tosubscribe"></a>
+		<a class="hiddenanchor" id="tologin"></a>
+		<div id="wrapper">
+			<div id="login" class="animate form">
+				<form  action="mysuperscript.php" autocomplete="on">
+					<h1>Log in</h1>
+					<p>
+						<label for="username" class="uname" data-icon="u" > Your email or username </label>
+						<input id="username" name="username" required="required" type="text" placeholder="E-mail"/>
+					</p>
+					<p>
+						<label for="password" class="youpasswd" data-icon="p"> Your password </label>
+						<input id="password" name="password" required="required" type="password" placeholder="Password" />
+					</p>
+					<p class="login button">
+						<input type="submit" value="Login" />
+					</p>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<div class="header-area"  id="home">
+		<div class="container">
+			<div class="heade-slider-content">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="header-content">
+						</div>
+					</div>
+				</div>
+				<!-- row -->
+			</div>
+		</div>
+		<!-- container -->
+	</div>
+{% endblock %}

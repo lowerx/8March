@@ -1,3 +1,4 @@
+from crypt import methods
 import sqlite3
 from flask import Flask, render_template, request, url_for, flash, redirect
 from werkzeug.exceptions import abort
@@ -19,11 +20,17 @@ def get_db_connection():
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'abdulla_balulah'
 
-@app.route('/')
-def index():
+@app.route('/', methods=('GET', 'POST'))
+def index(id=0):
     db = get_db_connection()
     connect = db.start_session()
-    return render_template('index.html', user=connect["user"])
+    return render_template('index.html', user=connect["user"], id=id)
+
+@app.route('/login')
+def login():
+    db = get_db_connection()
+    connect = db.start_session()
+    return render_template('login.html', user=connect["user"])
 
 # @app.route('/<int:post_id>')
 # def post(post_id):
