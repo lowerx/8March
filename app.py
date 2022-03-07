@@ -1,5 +1,6 @@
 from crypt import methods
 import sqlite3
+from turtle import update
 from flask import Flask, render_template, request, url_for, flash, redirect
 from werkzeug.exceptions import abort
 from database import DataBase
@@ -21,12 +22,37 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'abdulla_balulah'
 
 @app.route('/', methods=('GET', 'POST'))
-def index(id=0):
+def index():
     db = get_db_connection()
     connect = db.start_session()
-    return render_template('index.html', user=connect["user"], id=id)
+    quest = None
+    for quest in connect["quest"]:
+        if not quest.played:
+            break
+    print('URL - ', quest.url)
+    
+    if request.method == 'POST':
+        answer = request.form.get('message')
 
-@app.route('/login')
+        if answer != "Введите текст":
+            print(answer)
+            if (answer == "") or (answer is None):
+                flash('Answer is required!')
+            else:
+                if answer == quest.answer:
+                    updated = False
+                    for item in connect["quest"]:
+                        if (not item.played) and (not updated):
+                            item.played = True
+                            updated = True
+                        elif(not item.played) and (updated):
+                            quest = item
+    quest = {"url": quest.url, "answer": quest.answer, "played": quest.played}
+    db.c_and_c_connection()
+    print('URL - ', quest["url"])
+    return render_template('index.html', user=connect["user"], id=id, quest=quest)
+
+@app.route('/login', methods=('GET', 'POST'))
 def login():
     db = get_db_connection()
     connect = db.start_session()

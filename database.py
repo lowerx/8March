@@ -38,8 +38,20 @@ class DataBase(object):
     
     def __initial_fill(self):
         obj = Quest()
-        obj.answer = 'purupum'
-        obj.url = 'https://hap.'
+        obj.answer = 'ты прелестна словно роза'
+        obj.url = 'images/1_quest.jpg'
+        self.__session.add(obj)
+        self.c_and_c_connection()
+
+        obj = Quest()
+        obj.answer = 'только разница одна'
+        obj.url = 'images/2_quest.jpg'
+        self.__session.add(obj)
+        self.c_and_c_connection()
+
+        obj = Quest()
+        obj.answer = 'роза вянет от мороза'
+        obj.url = 'images/3_quest.jpg'
         self.__session.add(obj)
         self.c_and_c_connection()
 
@@ -79,7 +91,4 @@ class DataBase(object):
 
     def get_engine(self):
         return self.__engine
-    
-    def __create_table(self, input):
-        input.metadata.create_all(self.__engine)
 

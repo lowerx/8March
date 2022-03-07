@@ -38,7 +38,7 @@
 		        title: title,
 		        format: "multitoggle"
 		    });
-		})     
+		})
 
 
 		// screenshot Slider
@@ -68,31 +68,5 @@
 	        prevEl: '.swiper-button-prev',
 	      },
 	    });
-	 
-  
-		// magnificPopup videos popup   
-		//$('.popup-video').magnificPopup({
-		//	disableOn: 700,
-		//	type: 'iframe',
-		//	mainClass: 'mfp-fade',
-		//	removalDelay: 160,
-		//	preloader: false,
-		//	fixedContentPos: false
-		//});
-
-		 
-	    // Scroll to Top 
-		// $(window).on('scroll', function() {
-		// 	if ($(this).scrollTop() > 600) {
-		// 		$('.scrollToTop').fadeIn();
-		// 	} else {
-		// 		$('.scrollToTop').fadeOut();
-		// 	}
-		// });
-		// $('.scrollToTop').on('click', function () {
-		// 	$('html, body').animate({scrollTop : 0},2000);
-		// 	return false;
-		// });
-	   
 
 }(jQuery));

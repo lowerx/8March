@@ -16,9 +16,9 @@ body {
 	overflow-x: hidden;
 }
 #login {
-    	background: #ffffffa6;
-    	padding: 20px;
-    	border-radius: 8px;
+	background: #ffffffa6;
+	padding: 20px;
+	border-radius: 8px;
 }
 .wrapper {
 	overflow: hidden;
@@ -314,7 +314,7 @@ textarea:-moz-placeholder{
     font-style: italic;
 }
 input {
-  outline: none;
+  	outline: none;
 }
 
 #btn {
@@ -356,8 +356,12 @@ header {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	min-height: 800px;
+	min-height: 600px;
 	position: relative;
+}
+
+.header-area.quest {
+	min-height: auto;
 }
 
 .header-nav .menu>li.active>a:after,
@@ -399,7 +403,8 @@ header {
 
 /*-------------------------------------------------------
  - Footer Area Style
----------------------------------------------------------*/
+---------------------
+------------------------------------*/
 
 #contact-form {
     	background: #ffffffa6;
