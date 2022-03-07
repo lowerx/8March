@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
-{% block title %} Jeroglifico {{ quest["id"] }} {% endblock %}
+{% block title %} Jeroglifico {{ quest.url }} {% endblock %}
 
 {% block content %}
 	<div class="header-area quest"  id="home">
 		<div class="container">
 			<div class="row">
 				<div class="header-content">
-					<img style="max-width: 100%;" src="{{ url_for('static', filename=quest['url'])}}" alt="ребус №..">
+					<img style="max-width: 100%;" src="{{ url_for('static', filename=quest.url)}}" alt="ребус №..">
 				</div>
 			</div>
 		</div>
@@ -22,13 +22,12 @@
 			<div class="row">
 				<!--Grid column-->
 				<div class="col-md-12 mb-md-0 mb-5">
-					<form id="contact-form" name="contact-form" method="POST">
+					<form id="contact-form" name="contact-form" action="{{ url_for('submit', quest=quest) }}"" method="POST">
 						<div class="row">
 							<!--Grid column-->
 							<div class="col-md-12">
 								<div class="md-form">
 									<textarea id="message" name="message" rows="1" class="form-control md-textarea"></textarea>
-									<!-- <input id="message" name="message" rows="1" class="form-control md-textarea"> -->
 									<label for="message"">Введите текст</label>
 								</div>
 							</div>

@@ -10,21 +10,10 @@ def get_db_connection():
     db = DataBase('Jeroglifico')
     return db
 
-
-# def get_post(post_id):
-#     conn = get_db_connection()
-#     post = conn.execute('SELECT * FROM posts WHERE id = ?',
-#                         (post_id,)).fetchone()
-#     conn.close()
-#     if post is None:
-#         abort(404)
-#     return post
-
 app = Flask(__name__)
-server = app.server
 app.config['SECRET_KEY'] = 'abdulla_balulah'
 
-@app.route('/', methods=('GET', 'POST'))
+@app.route('/', methods=['GET', 'POST'])
 def index():
     db = get_db_connection()
     connect = db.start_session()
@@ -33,27 +22,26 @@ def index():
         if not quest.played:
             break
     print('URL - ', quest.url)
-    
-    if request.method == 'POST':
-        answer = request.form.get('message')
-
-        if answer != "Введите текст":
-            print(answer)
-            if (answer == "") or (answer is None):
-                flash('Answer is required!')
-            else:
-                if answer == quest.answer:
-                    updated = False
-                    for item in connect["quest"]:
-                        if (not item.played) and (not updated):
-                            item.played = True
-                            updated = True
-                        elif(not item.played) and (updated):
-                            quest = item
-    quest = {"url": quest.url, "answer": quest.answer, "played": quest.played}
-    db.c_and_c_connection()
-    print('URL - ', quest["url"])
     return render_template('index.html', user=connect["user"], id=id, quest=quest)
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    db = get_db_connection()
+    connect = db.start_session()
+    
+    quest = None
+    for quest in connect["quest"]:
+        if not quest.played:
+            break
+    
+    answer = request.form['message']
+    if (answer == "") or (answer is None):
+        flash('Answer is required!')
+    else:
+        if answer == quest.answer:
+            quest.played = True
+            connect["session"].commit()
+    return redirect(url_for('index'))
 
 @app.route('/login', methods=('GET', 'POST'))
 def login():

@@ -72,9 +72,9 @@ class DataBase(object):
         Session = sessionmaker(bind=self.__engine)
         self.__session = Session()
         if not initial:
-            user = self.__session.query(User).all()
-            prize = self.__session.query(Prize).all()
-            quest = self.__session.query(Quest).all()
+            user = self.__session.query(User).order_by(User.id).all()
+            prize = self.__session.query(Prize).order_by(Prize.id).all()
+            quest = self.__session.query(Quest).order_by(Quest.id).all()
             return {"session": self.__session, "user": user, "prize": prize, "quest": quest}
     
     def c_and_c_connection(self):
