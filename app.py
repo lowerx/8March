@@ -1,4 +1,5 @@
 from crypt import methods
+from http import server
 import sqlite3
 from turtle import update
 from flask import Flask, render_template, request, url_for, flash, redirect
@@ -8,6 +9,7 @@ from database import DataBase
 def get_db_connection():
     db = DataBase('Jeroglifico')
     return db
+
 
 # def get_post(post_id):
 #     conn = get_db_connection()
@@ -19,6 +21,7 @@ def get_db_connection():
 #     return post
 
 app = Flask(__name__)
+server = app.server
 app.config['SECRET_KEY'] = 'abdulla_balulah'
 
 @app.route('/', methods=('GET', 'POST'))
